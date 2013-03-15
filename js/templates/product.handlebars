@@ -1,0 +1,17 @@
+<h2>Product</h2>
+
+<p>
+  <b>Name:</b> {{name}}
+</p>
+
+<p>
+  <b>Description:</b> {{description}}
+</p>
+
+<p>
+  <b>Price:</b> {{price}}
+</p>
+
+{{#linkTo "products"}}←All Products{{/linkTo}}
+{{#linkTo "edit_product" model}}Edit{{/linkTo}}
+<a href="#" {{action "destroy"}}>Destroy</a>
