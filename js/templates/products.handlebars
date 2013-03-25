@@ -1,23 +1,37 @@
-<h2>Products</h2>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>Products</h2>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1">
+            {{#linkTo "new_product"}}New Product{{/linkTo}}
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table">
+              <thead>
+                <th>name</th>
+                <th>description</th>
+                <th>price</th>
+              </thead>
+              <tbody>
+                {{#each product in controller}}
+                <tr>
+                  <td>{{product.name}}</td>
+                  <td>{{product.description}}</td>
+                  <td>{{product.price}}</td>
+                  <td>{{#linkTo "product" product}}view{{/linkTo}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-{{#linkTo "new_product"}}New Product{{/linkTo}}
 
-<table>
-  <thead>
-    <th>name</th>
-    <th>description</th>
-    <th>price</th>
-  </thead>
-  <tbody>
-    {{#each product in controller}}
-    <tr>
-      <td>{{product.name}}</td>
-      <td>{{product.description}}</td>
-      <td>{{product.price}}</td>
-      <td>{{#linkTo "product" product}}view{{/linkTo}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
 
 
