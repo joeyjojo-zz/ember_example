@@ -1,25 +1,30 @@
-<h2>Product</h2>
+<div class="container-fluid">
+    <h2>Product</h2>
 
-<form {{action save on="submit"}}>
-  
-  <p>
-    <label for="name">Name</label><br>
-    {{view Ember.TextField valueBinding="name" id="name"}}
-  </p>
-  
-  <p>
-    <label for="description">Description</label><br>
-    {{view Ember.TextField valueBinding="description" id="description"}}
-  </p>
-  
-  <p>
-    <label for="price">Price</label><br>
-    {{view Ember.TextField valueBinding="price" id="price"}}
-  </p>
-  
-  <p>
-    <button type="submit">Save</button>
-  </p>
+    <form {{action save on="submit"}} class="form-horizontal">
 
-</form>
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                {{view Ember.TextField valueBinding="name" id="name" placeholder="Name"}}
+            </div>
+        </div>
 
+        <div class="control-group">
+            <label class="control-label" for="name">Description</label>
+            <div class="controls">
+                {{view Ember.TextArea valueBinding="description" id="description" placeholder="Enter description..."}}
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="name">Price</label>
+            <div class="controls">
+                {{view Ember.TextField valueBinding="price" id="price" placeholder="0.00"}}
+            </div>
+        </div>
+
+        <button type="submit">Save</button>
+
+    </form>
+</div>
